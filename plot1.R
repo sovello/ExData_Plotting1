@@ -9,8 +9,6 @@ mySql = "SELECT * FROM file WHERE Date='1/2/2007' OR Date='2/2/2007' "
 
 ##Reading data into householdata (use csv2) cos this is separated by ';'
 householdata <- read.csv2.sql(datafile, mySql)
-householdata[householdata=="?"] <- NA
-householdata[complete.cases(householdata)]
 
 ##Prepare a png device where to plot the
 png(filename="plot1.png", width=480, height=480, units="px")
